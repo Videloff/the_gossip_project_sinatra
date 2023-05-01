@@ -1,0 +1,16 @@
+<html>
+  <head>
+    <title>The Gossip Project</title>
+  </head>
+  <body>
+    <h1>Bienvenue cher utilisateur!</h1>
+    <p>Vous pouvez créer un nouveau potin en <a href="/gossips/new/">cliquant ici</a>.</p>
+    <br>
+    <p> Voici la liste actuelle des potins :</p>
+    <% gossips.each do |gossip| %>
+      <p>
+        <%= gossip[0] %> : <%= gossip[1] %>
+      </p>
+    <% end %>
+  </body>
+</html>
