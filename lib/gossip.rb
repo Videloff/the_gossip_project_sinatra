@@ -12,7 +12,6 @@ class Gossip
     data = [@name, @content]
     CSV.open("db/gossip.csv", "a"){|content|content << data}
     # CSV.open("../db/gossip.csv", "a"){|content|content << data}
-
   end
 
   def self.all
@@ -27,6 +26,18 @@ class Gossip
     else
       return [index, data_all[index.to_i][0], data_all[index.to_i][1]]
     end
+  end
+
+  def self.find_index(name, value)
+    i = 0
+    # data_all = all()
+    CSV.foreach('db/gossip.csv'){|tab_index|
+    # CSV.foreach('../db/gossip.csv') do |tab_index|
+      if tab_index[0] == name && tab_index[1] == value
+        return i
+      end
+      i += 1
+    }
   end
 
 end
