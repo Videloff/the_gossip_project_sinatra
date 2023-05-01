@@ -5,6 +5,22 @@ This THP project have been made in html and ruby 2.7.4 with some requirements.
 It's purpose is to put on -a index of a localhost html- a csv file contents.
 Contents are stocked in a data file call gossip.csv, whitch are a array. The key is the name of the user that create a gossip, and the value is the user's content.
 
+## Architecture
+
+the_gossip_project_sinatra
+
+├── lib/\
+│ . . . . ├── controller.rb\
+│ . . . . ├── gossip.rb\
+│ . . . . └── views\
+│ . . . . . . . . . . . ├── index.erb\
+│ . . . . . . . . . . . └── new_gossip.erb\
+├── db/\
+│ . . . .  └── gossip.csv\
+├── config.ru\
+├── README.md\
+├── Gemfile\
+└── Gemfile.lock
 ## Installation
 
 Install my-project with :
@@ -39,4 +55,3 @@ open the localhost as
 ## Authors
 
 - [@Videloff](https://www.github.com/videloff)
-
