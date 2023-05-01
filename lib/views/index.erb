@@ -9,7 +9,6 @@
     <p> Voici la liste actuelle des potins :</p>
     <% gossips.each do |gossip| %>
       <p>
-
         <a href="/gossips/<%= Gossip.find_index(gossip[0], gossip[1]) %>/"><%= gossip[0] %> : <%= gossip[1] %></a>
       </p>
     <% end %>
