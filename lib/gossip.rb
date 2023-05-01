@@ -10,13 +10,14 @@ class Gossip
 
   def save
     data = [@name, @content]
-    CSV.open("db/gossip.csv", "a"){|content|content << data}
+    CSV.open("db/gossip.csv", "ab"){|content|content << data}
   end
 
   def self.all
     return CSV.parse(File.read('db/gossip.csv'), headers: false)
   end
   
+  # find the array that match the index
   def self.find(index)
     data_all = all()
     if index.to_i + 1 > data_all.length || index.to_i < 0
@@ -26,6 +27,7 @@ class Gossip
     end
   end
 
+  # find the index that match array's name and value
   def self.find_index(name, value)
     i = 0
     CSV.foreach('db/gossip.csv'){|tab_index|
