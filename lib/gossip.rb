@@ -11,12 +11,10 @@ class Gossip
   def save
     data = [@name, @content]
     CSV.open("db/gossip.csv", "a"){|content|content << data}
-    # CSV.open("../db/gossip.csv", "a"){|content|content << data}
   end
 
   def self.all
     return CSV.parse(File.read('db/gossip.csv'), headers: false)
-    # return CSV.parse(File.read('../db/gossip.csv'), headers: false)
   end
   
   def self.find(index)
