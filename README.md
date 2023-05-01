@@ -1,5 +1,5 @@
 
-# MVC_json_file
+# the_gossip_project_sinatra
 
 This THP project have been made in html and ruby 2.7.4 with some requirements.
 It's purpose is to put on -a index of a localhost html- a csv file contents.
