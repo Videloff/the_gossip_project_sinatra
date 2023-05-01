@@ -46,12 +46,13 @@ open the localhost as
 - show data stock in the csv file into http://localhost:4567/gossips/new/
 
 
-## programming language
+## Badges
 
-*Ruby, Html*
-
-
+[![GPLv3 License](https://img.shields.io/badge/Ruby-2.7.4-red)](https://www.ruby-lang.org/en/news/2021/07/07/ruby-2-7-4-released/)
+[![GPLv3 License](https://img.shields.io/badge/gem-2.4.12-brightgreen)](https://rubygems.org/gems/bundler/versions/2.4.12)
+[![GPLv3 License](https://img.shields.io/badge/html-5-orange)](https://wikipedia.org/wiki/HTML5)
 
 ## Authors
 
-- [@Videloff](https://www.github.com/videloff)
+[![GPLv3 License](https://img.shields.io/badge/github-Videloff-ffffff)](https://www.github.com/videloff)
+
