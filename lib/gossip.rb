@@ -17,6 +17,16 @@ class Gossip
 
   def self.all
     return CSV.parse(File.read('db/gossip.csv'), headers: false)
+    # return CSV.parse(File.read('../db/gossip.csv'), headers: false)
+  end
+  
+  def self.find(index)
+    data_all = all()
+    if index.to_i + 1 > data_all.length || index.to_i < 0
+      return [nil, nil, nil]
+    else
+      return [index, data_all[index.to_i][0], data_all[index.to_i][1]]
+    end
   end
 
 end
